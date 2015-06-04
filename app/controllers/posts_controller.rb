@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 		respond_with Post.find(params[:id])
 	end
 
-	def upvoate
+	def upvote
 		post = Post.find(params[:id])
 		post.increment!(:upvotes)
 
@@ -28,4 +28,5 @@ class PostsController < ApplicationController
 	def post_params
 		params.require(:post).permit(:link, :title)
 	end
+
 end

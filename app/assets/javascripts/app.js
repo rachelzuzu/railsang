@@ -1,4 +1,4 @@
-//module= functions run when application starts
+//newsapp module= functions run when application starts
 angular.module('newsApp', ['ui.router', 'templates'])
 
 .config(['$stateProvider', '$urlRouterProvider',

@@ -21,6 +21,9 @@ gem 'angular-rails-templates'
 # for respond_to
 gem 'responders', '~> 2.0'
 
+# to help save posts to the server
+gem 'angular_rails_csrf'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
