@@ -23,12 +23,5 @@ angular.module('newsApp')
 	  });
 	};
 
-	  // anytime our home state is entered, we will automatically query all posts from our backend before the state actually finishes loading
-	resolve: {
-		postPromise: ['posts', function(posts){
-	    return posts.getAll();
-	  }]
-	}
-
 	return o;
 	}]);
