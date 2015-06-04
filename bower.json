@@ -1,0 +1,21 @@
+{
+  "name": "app-news",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rachelzuzu/railsang",
+  "authors": [
+    "Rachel Zuzu <rachelzuzu4@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.4",
+    "angular": "~1.4.0"
+  }
+}
