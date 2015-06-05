@@ -15,11 +15,18 @@ function($stateProvider, $urlRouterProvider) {
         }]
       }
     })
+  // resolve: query all posts from the backend before the home state is loaded so all the posts exist in the db
 
   .state('posts', {
 	  url: '/posts/{id}',
 	  templateUrl: 'posts/_posts.html',
 	  controller: 'PostsCtrl'
+    // ,
+    // resolve: {
+    //   post: ['$stateParams', 'posts', function($stateParams, posts) {
+    //     return posts.get($stateParams.id);
+    //   }]
+    // }
  })
 
    $urlRouterProvider.otherwise('home');

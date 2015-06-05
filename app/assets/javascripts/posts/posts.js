@@ -23,5 +23,21 @@ angular.module('newsApp')
 	  });
 	};
 
+	// upvote method
+	o.upvote = function(post) {
+	  return $http.put('/posts/' + post.id + '/upvote.json')
+	    .success(function(data){
+	      post.upvotes += 1;
+	    });
+	};
+
+	//retrieve a single post from the server
+	// o.get = function(id) {
+	// 	return $http.get('/posts/' + id + '.json').then(function(res){
+	// 		return res.data;
+	// 	});
+	// };
+
 	return o;
-	}]);
+	}
+]);
