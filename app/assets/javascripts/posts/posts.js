@@ -32,11 +32,23 @@ angular.module('newsApp')
 	};
 
 	//retrieve a single post from the server
-	// o.get = function(id) {
-	// 	return $http.get('/posts/' + id + '.json').then(function(res){
-	// 		return res.data;
-	// 	});
-	// };
+	o.get = function(id) {
+		return $http.get('/posts/' + id + '.json').then(function(res){
+			return res.data;
+		});
+	};
+
+	//enable adding comments
+	o.addComment = function(id, comment) {
+	  return $http.post('/posts/' + id + '/comments.json', comment);
+	};
+
+	o.upvoteComment = function(post, comment) {
+	  return $http.put('/posts/' + post.id + '/comments/'+ comment.id + '/upvote.json')
+	    .success(function(data){
+	      comment.upvotes += 1;
+	    });
+	};
 
 	return o;
 	}

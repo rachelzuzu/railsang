@@ -16,7 +16,7 @@ function($scope, posts){
 	  $scope.link = '';
 	};
 		
-
+	// use the put() method to upvote a post. when the call returns successfully, the local copy gets updated to reflect the change
 	$scope.incrementUpvotes = function(post) {
 		posts.upvote(post);
 		};

@@ -1,10 +1,5 @@
 class PostsController < ApplicationController
 
-	# method to permit the :link and :title attributes in PostsController
-	def post_params
-		params.require(:post).permit(:link, :title)
-	end
-
 	def index
 		respond_with Post.all
 	end
@@ -24,9 +19,9 @@ class PostsController < ApplicationController
 		respond_with post
 	end
 
+	# method to permit the :link and :title attributes in PostsController
 	private
 	def post_params
 		params.require(:post).permit(:link, :title)
 	end
-
 end
