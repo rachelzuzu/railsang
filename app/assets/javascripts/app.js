@@ -1,4 +1,4 @@
-//module= functions run when application starts
+//newsapp module= functions run when application starts
 angular.module('newsApp', ['ui.router', 'templates'])
 
 .config(['$stateProvider', '$urlRouterProvider',
@@ -8,13 +8,25 @@ function($stateProvider, $urlRouterProvider) {
   .state('home', {
       url: '/home',
       templateUrl: 'home/_home.html',
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
+      resolve: {
+        postPromise: ['posts', function(posts){
+          return posts.getAll();
+        }]
+      }
     })
+  // resolve: query all posts from the backend before the home state is loaded so all the posts exist in the db
 
   .state('posts', {
 	  url: '/posts/{id}',
 	  templateUrl: 'posts/_posts.html',
 	  controller: 'PostsCtrl'
+    // ,
+    // resolve: {
+    //   post: ['$stateParams', 'posts', function($stateParams, posts) {
+    //     return posts.get($stateParams.id);
+    //   }]
+    // }
  })
 
    $urlRouterProvider.otherwise('home');
