@@ -1,1 +1,3 @@
-This is a rails + angular hackernews clone.
+This is a rails + angular hackernews clone for me to learn angular.
+
+https://serene-beyond-4119.herokuapp.com
