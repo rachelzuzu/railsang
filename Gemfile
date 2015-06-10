@@ -10,6 +10,8 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# added for heroku 
+gem 'coffee-rails'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -32,11 +34,11 @@ gem "twitter-bootstrap-rails"
 
 # convert to postgres for heroku
 gem 'pg'
-gem'rails_12factor'
+gem'rails_12factor', group: :production
 
 #more heroku :)
 group :assets do
-  gem 'less', '2.2.2' 
+  gem 'less'
 end
 
 # Use ActiveModel has_secure_password
