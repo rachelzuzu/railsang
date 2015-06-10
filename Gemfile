@@ -31,10 +31,8 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 
 # convert to postgres for heroku
-group :production do
-   gem 'pg'
-   gem 'rails_12factor'
- end
+gem 'pg'
+gem'rails_12factor'
 
 #more heroku :)
 group :assets do
