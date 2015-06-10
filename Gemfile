@@ -25,17 +25,18 @@ gem 'responders', '~> 2.0'
 # to help save posts to the server
 gem 'angular_rails_csrf'
 
-# convert to postgres for heroku
-gem 'pg'
-
-#heroku gem
-gem 'rails_12factor', group: :production
-
-#moar heroku :)
+#more heroku :)
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 
+# convert to postgres for heroku
+group :production do
+   gem 'pg'
+   gem 'rails_12factor'
+ end
+
+#more heroku :)
 group :assets do
   gem 'less', '2.2.2' 
 end
