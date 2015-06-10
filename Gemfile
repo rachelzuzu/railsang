@@ -31,6 +31,15 @@ gem 'pg'
 #heroku gem
 gem 'rails_12factor', group: :production
 
+#moar heroku :)
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+
+group :assets do
+  gem 'less', '2.2.2' 
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
