@@ -43,6 +43,7 @@ angular.module('newsApp')
 	  return $http.post('/posts/' + id + '/comments.json', comment);
 	};
 
+	//save votes
 	o.upvoteComment = function(post, comment) {
 	  return $http.put('/posts/' + post.id + '/comments/'+ comment.id + '/upvote.json')
 	    .success(function(data){
